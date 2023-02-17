@@ -80,9 +80,9 @@
 }
 
 .projectsTitle {
-  font-size: 10vh;
+  font-size: 10vw;
   color: #333;
-  line-height: 100vh;
+  text-align: center;
 }
 
 .project {
@@ -203,6 +203,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: space-around;
 }
@@ -250,4 +251,48 @@
 
 .githubChart:hover .active:nth-child(2n) {
   background-color: #063f24;
+}
+
+.githubSm {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+  .project {
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .phone,
+  .laptop {
+    transform: none !important;
+  }
+
+  .githubTitle {
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  .githubChart {
+    display: none;
+  }
+
+  .githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+    text-align: center;
+  }
 }
